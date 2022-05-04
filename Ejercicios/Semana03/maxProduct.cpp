@@ -7,16 +7,31 @@
 */
 
 #include <iostream>
-#include <algorithm>
 #include <vector>
 
 using namespace std;
 
+void insertionSort(vector<int> &A, int _length)
+{
+    int i, j, key, position;
+    for (j = 1; j < _length; j++) 
+    {
+        key = A[j];
+        i = j-1;
+
+        while (i >= 0 && A[i] > key)
+        {
+            A[i+1] = A[i];
+            i = i-1;
+        } 
+        A[i+1] = key;
+    }
+}
 int MaxProduct(vector<int> &secuencia)
 {
     int n = secuencia.size();
-    sort(secuencia.begin(), secuencia.end());
-    // Multiplicar el último pot el penultimo elemento 
+    insertionSort(secuencia, secuencia.size());
+    // Multiplicar el último pot el penultimo elemento en el array ordenado resulta en el producto máximo
     return secuencia.at(n-1)*secuencia.at(n-2);
 }
 
