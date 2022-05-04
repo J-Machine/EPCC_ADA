@@ -20,7 +20,7 @@ void insertionSortDesc(vector<int> &A, int _length)
         key = A[j];
         i = j-1;
 
-        while (i >= 0 && A[i] < key)    // Descendente: el valor actual es mayor al anterior y se intervcambia . Los valores grandes se mueven al lado izquierdo.
+        while (i >= 0 && A[i] < key)    // Descendente: el valor actual es mayor al anterior y se intercambia . Los valores grandes se mueven al lado izquierdo.
         {
             A[i+1] = A[i];
             i = i-1;

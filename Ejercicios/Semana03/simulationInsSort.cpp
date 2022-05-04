@@ -27,6 +27,8 @@ void insertionSort(vector<int> &A, int _length)
             i = i-1;
         } 
         A[i+1] = key;
+        PrintVector(A);
+        cout<<endl;
     }
 }
 int main ()
@@ -35,9 +37,8 @@ int main ()
     cout << "Array: ";
     PrintVector(secuencia);
 
-    cout << "\nArray Ordenado: ";
+    cout << "\nArray Ordenado Simulacion: \n";
     insertionSort(secuencia, secuencia.size());
-    PrintVector(secuencia);
     cout<<endl;
     return 0;
 }

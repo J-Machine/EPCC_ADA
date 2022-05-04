@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+Ejercicios/.vscode
+.vscode/tasks.json
